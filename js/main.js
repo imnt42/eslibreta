@@ -11,7 +11,7 @@ if (!!$.prototype.justifiedGallery) {
 }
 
 $(document).ready(function() {
-
+  // $("#nav").show();
   /**
    * Shows the responsive navigation menu on mobile.
    */
@@ -56,7 +56,7 @@ $(document).ready(function() {
      */
     if (menu.length) {
       $(window).on("scroll", function() {
-        var topDistance = menu.offset().top;
+        var topDistance = $(window).scrollTop(); 
 
         // hide only the navigation links on desktop
         if (!nav.is(":visible") && topDistance < 50) {
